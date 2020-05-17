@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
-import { updateTemplate } from '../../store/actions'
+import { updateTemplate } from '@/store/actions'
 
 class Home extends Component {
   constructor(props) {
