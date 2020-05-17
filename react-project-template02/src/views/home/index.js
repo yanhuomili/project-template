@@ -22,6 +22,14 @@ class Home extends Component {
         >
           按钮
         </button>
+        <button
+          onClick={() => {
+            console.log(this.props, 'this.props')
+            this.props.history.goBack()
+          }}
+        >
+          返回上一个页面
+        </button>
       </div>
     )
   }

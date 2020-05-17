@@ -1,9 +1,8 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 import logo from './logo.svg'
 import './App.css'
 import { connect } from 'react-redux' // 连接器
-import Home from './views/home'
-import TemplatePage from './views/templatePage'
 
 function App(props) {
   return (
@@ -20,9 +19,13 @@ function App(props) {
         </button>
         <div>{props.a}</div>
         <div>{props.b}</div>
+        <button>
+          <Link to="/home">跳转到home页面</Link>
+        </button>
+        <button>
+          <Link to="/templatePage">跳转到templatePage页面</Link>
+        </button>
       </header>
-      <Home></Home>
-      <TemplatePage></TemplatePage>
 
       <ul>
         {props.list.map((item, index) => {

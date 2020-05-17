@@ -23,6 +23,14 @@ class Template extends Component {
           更新store
         </button>
         <div>store数据：{this.props.templateMsg}</div>
+        <button
+          onClick={() => {
+            console.log(this.props, 'this.props')
+            this.props.history.goBack()
+          }}
+        >
+          返回上一个页面
+        </button>
       </div>
     )
   }
