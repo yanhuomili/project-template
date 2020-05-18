@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
 import { updateTemplate } from '@/store/actions'
+import { getData, getList, getSome } from '@/api/home'
 
 class Home extends Component {
   constructor(props) {
@@ -8,6 +9,32 @@ class Home extends Component {
     this.state = {
       msg: 'home page message',
     }
+  }
+  componentDidMount() {
+    console.log('mounted')
+  }
+  getData() {
+    getData({ a: 'get Data' })
+      .then((res) => {
+        console.log(res, 'res')
+      })
+      .catch((err) => {
+        console.log(err, 'err')
+      })
+    getList({ a: 'post List' })
+      .then((res) => {
+        console.log(res, 'res')
+      })
+      .catch((err) => {
+        console.log(err, 'err')
+      })
+    getSome({ a: 'post Some' })
+      .then((res) => {
+        console.log(res, 'res')
+      })
+      .catch((err) => {
+        console.log(err, 'err')
+      })
   }
   render() {
     return (
@@ -30,6 +57,7 @@ class Home extends Component {
         >
           返回上一个页面
         </button>
+        <button onClick={this.getData}>请求数据</button>
       </div>
     )
   }

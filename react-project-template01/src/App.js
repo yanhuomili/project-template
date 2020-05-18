@@ -1,7 +1,7 @@
 import React from 'react'
 import logo from './logo.svg'
 import './App.css'
-import TodoList from './views/todoList'
+import TodoList from '@/views/todoList'
 function App() {
   return (
     <div className="App">
