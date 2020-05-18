@@ -1,7 +1,7 @@
 import axios from 'axios'
 
 let server = axios.create({
-  baseURL: 'http://localhost:18000',
+  baseURL: 'http://localhost:3000/api',
   timeout: 30000,
 })
 
@@ -19,7 +19,7 @@ server.interceptors.request.use(
 server.interceptors.response.use(
   (response) => {
     /* 响应结果做些处理 */
-    return response
+    return response.data
   },
   (err) => {
     /* 响应错误处理 */

@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 import { connect } from 'react-redux'
 import { updateTemplate } from '@/store/actions'
 import { getData, getList, getSome } from '@/api/home'
+import { formatNumber } from '@/utils'
 
 class Home extends Component {
   constructor(props) {
@@ -12,6 +13,7 @@ class Home extends Component {
   }
   componentDidMount() {
     console.log('mounted')
+    console.log(formatNumber(1))
   }
   getData() {
     getData({ a: 'get Data' })

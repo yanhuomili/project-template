@@ -1,3 +1,11 @@
+# 基本配置
+
+- 路由 react-router-dom
+- 状态管理 redux+ react-redux
+- http请求 axios
+- 跨域处理 http-proxy-middleware
+- 别名配置 react-app-rewired+customize-cra+babel-plugin-import
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
