@@ -3,7 +3,6 @@ import { connect } from 'react-redux'
 import { updateTemplate } from '@/store/actions'
 import { getData, getList, getSome } from '@/api/home'
 import { formatNumber } from '@/utils'
-import server from '@/common/httpServer'
 
 class Home extends Component {
   constructor(props) {
