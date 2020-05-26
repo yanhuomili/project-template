@@ -3,11 +3,16 @@ import ReactDOM from 'react-dom'
 import './index.css'
 import App from './App'
 import * as serviceWorker from './serviceWorker'
+import { Provider as KeepAliveProvider, KeepAlive } from 'react-keep-alive'
 
 ReactDOM.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
+  // <React.StrictMode>
+  <KeepAliveProvider>
+    <KeepAlive name="App">
+      <App />
+    </KeepAlive>
+  </KeepAliveProvider>,
+  // </React.StrictMode>,
   document.getElementById('root')
 )
 
