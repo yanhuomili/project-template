@@ -1,3 +1,7 @@
+## store 使用注意事项
+
+- 在 reducer 里面处理 state 时，需要克隆一份新的 state，并在处理完业务之后返回这个新的 state,如果直接修改 state 并返回的话，视图不会自动更新，需要在 store.subscribe 回调函数里手动更新
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
