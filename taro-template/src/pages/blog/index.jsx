@@ -6,50 +6,6 @@ function Blog(){
   useEffect(()=>{
     console.log('useEffect--blog')
   })
-  const list=[
-    {
-      "name":"A",
-      "id":1,
-      "list":[
-        {
-          "name":"this is a1",
-          "p_id":1,
-          "id":11
-        },
-        {
-          "name":"this is a2",
-          "p_id":1,
-          "id":12
-        },
-        {
-          "name":"this is a3",
-          "p_id":1,
-          "id":13
-        }
-      ]
-    },
-    {
-      "name":"B",
-      "id":2,
-      "list":[
-        {
-          "name":"this is b1",
-          "p_id":2,
-          "id":21
-        },
-        {
-          "name":"this is b2",
-          "p_id":2,
-          "id":22
-        },
-        {
-          "name":"this is b3",
-          "p_id":2,
-          "id":23
-        }
-      ]
-    }
-  ]
   const change=()=>{
     setMsg('update blog page msg')
   }
