@@ -1,0 +1,8 @@
+<template name="add">
+  <text>add</text>--
+  <text>{{text}}</text>
+</template>
+<template name="even">
+  <text>even</text>--
+  <text>{{text}}</text>
+</template>

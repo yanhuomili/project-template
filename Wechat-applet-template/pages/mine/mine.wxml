@@ -1,0 +1,71 @@
+<!--pages/mine/mine.wxml-->
+<import src="../../template/mytemplate.wxml"/>
+<view>
+  <include src="../../template/header.wxml"/>
+  <view>{{msg}}</view>
+  <view>
+    {{1+2}}
+  </view>
+  <view class="list">
+    <view class="list-item" wx:for="{{list}}" wx:key="key">
+      <block wx:if="{{index < 2}}">
+        {{item.text}} -- aa
+      </block>
+      <block wx:elif="{{index < 3}}">
+        {{item.text}} -- bb
+      </block>
+      <block wx:else>
+        {{item.text}} -- cc
+      </block>
+    </view>
+    <view bindtap="goBack">返回上一页</view>
+  </view>
+  <view class="list">
+    <view class="list-item" wx:for="{{list}}" wx:key="key">
+      <block wx:if="{{index < 2}}">
+        {{item.text}} -- aa
+      </block>
+      <block wx:elif="{{index < 3}}">
+        {{item.text}} -- bb
+      </block>
+      <block wx:else>
+        {{item.text}} -- cc
+      </block>
+    </view>
+    <view bindtap="goBack">返回上一页</view>
+  </view>
+  <view class="list">
+    <view class="list-item" wx:for="{{list}}" wx:key="key">
+      <block wx:if="{{index < 2}}">
+        {{item.text}} -- aa
+      </block>
+      <block wx:elif="{{index < 3}}">
+        {{item.text}} -- bb
+      </block>
+      <block wx:else>
+        {{item.text}} -- cc
+      </block>
+    </view>
+    <view bindtap="goBack">返回上一页</view>
+  </view>
+  <view class="list">
+    <view class="list-item" wx:for="{{list}}" wx:key="key">
+      <block wx:if="{{index < 2}}">
+        {{item.text}} -- aa
+      </block>
+      <block wx:elif="{{index < 3}}">
+        {{item.text}} -- bb
+      </block>
+      <block wx:else>
+        {{item.text}} -- cc
+      </block>
+    </view>
+    <view bindtap="goBack">返回上一页</view>
+  </view>
+
+  <view wx:for="{{list}}" wx:key="key">
+    <template is="{{index%2==0?'even':'add'}}" data="{{text:item.text}}"></template>
+  </view>
+  
+  <include src="../../template/footer.wxml"/>
+</view>

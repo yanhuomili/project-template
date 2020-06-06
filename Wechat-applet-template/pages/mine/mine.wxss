@@ -1,0 +1,9 @@
+/* pages/mine/mine.wxss */
+.list{
+  background-color: pink;
+  padding: 15px;
+}
+.list-item{
+  margin: 10px;
+  color: #f9f9f9;
+}
