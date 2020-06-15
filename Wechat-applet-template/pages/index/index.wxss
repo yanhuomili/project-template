@@ -20,3 +20,50 @@
 .usermotto {
   margin-top: 20px;
 }
+.page-section-spacing {
+  width: 100%;
+  height: 100vh;
+}
+.scroll-view_H {
+  white-space: nowrap;
+}
+.scroll-view-item {
+  height: 300rpx;
+}
+.scroll-view-item_H {
+  display: inline-block;
+  width: 100%;
+  height: 300rpx;
+}
+
+#demo1 {
+  background-color: aqua;
+}
+#demo2 {
+  background-color: pink;
+}
+#demo3 {
+  background-color: lawngreen;
+}
+.swiper-item {
+  background: pink;
+  width: 100%;
+  height: 100vh;
+}
+.page-section {
+  width: 100vw;
+  height: 100vh;
+}
+.swiper {
+  width: 100%;
+  height: 100vh;
+}
+.demo-text-1 {
+  background: pink;
+}
+.demo-text-2 {
+  background: greenyellow;
+}
+.demo-text-3 {
+  background: lightblue;
+}

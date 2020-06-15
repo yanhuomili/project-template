@@ -1,11 +1,21 @@
 <!--index.wxml-->
-<view class="container">
-  <view class="userinfo">
+<view class="">
+  <!--<view class="userinfo">
     <button wx:if="{{!hasUserInfo && canIUse}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo"> 获取头像昵称 </button>
     <block wx:else>
       <image bindtap="bindViewTap" class="userinfo-avatar" src="{{userInfo.avatarUrl}}" mode="cover"></image>
       <text class="userinfo-nickname">{{userInfo.nickName}}</text>
     </block>
+  </view>
+  <view class="page-section-spacing">
+    <text>
+      是的发生纠纷世纪东方
+    </text>
+    <scroll-view scroll-y="true" style="height: 300rpx;" bindscrolltoupper="upper" bindscrolltolower="lower" bindscroll="scroll" scroll-into-view="{{toView}}" scroll-top="{{scrollTop}}">
+      <view id="demo1" class="scroll-view-item demo-text-1"></view>
+      <view id="demo2"  class="scroll-view-item demo-text-2"></view>
+      <view id="demo3" class="scroll-view-item demo-text-3"></view>
+    </scroll-view>
   </view>
   <view>
     <navigator url="/pages/logs/logs">跳转到日志页面</navigator>
@@ -13,5 +23,15 @@
   </view>
   <view class="usermotto">
     <text class="user-motto">{{motto}}</text>
-  </view>
+  </view>-->
+  <view class="page-section page-section-spacing swiper">
+      <swiper class="swiper" vertical="{{vertical}}" indicator-dots="{{indicatorDots}}"
+        autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}">
+        <block wx:for="{{background}}" wx:key="*this">
+          <swiper-item>
+            <view class="swiper-item {{item}}"></view>
+          </swiper-item>
+        </block>
+      </swiper>
+    </view>
 </view>
