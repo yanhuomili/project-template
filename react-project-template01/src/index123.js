@@ -1,15 +1,14 @@
-import React, { Suspense } from 'react'
+import React from 'react'
 import ReactDOM from 'react-dom'
 import './index.css'
-// import App from './App'
+import App from './App'
+import TodoList from './views/todoList'
+import Home from './views/home'
+import Home1 from './views/home/home1'
+import Home2 from './views/home/home2'
+import Test from './views/home/test'
 import * as serviceWorker from './serviceWorker'
 import { BrowserRouter as Router, Route } from 'react-router-dom'
-const App = React.lazy(() => import('./App'))
-const TodoList = React.lazy(() => import('./views/todoList'))
-const Home = React.lazy(() => import('./views/home'))
-const Home1 = React.lazy(() => import('./views/home/home1'))
-const Home2 = React.lazy(() => import('./views/home/home2'))
-const Test = React.lazy(() => import('./views/home/test'))
 const routeConfig = [
   {
     path: '/',
@@ -51,14 +50,12 @@ console.log(<Route path="/todo" component={TodoList}></Route>, '1111')
 ReactDOM.render(
   <React.StrictMode>
     <Router>
-      <Suspense fallback={<div>加载中。。。</div>}>
-        <Route exact path="/" component={App}></Route>
-        <Route exact path="/todo" component={TodoList}></Route>
-        <Route exact path="/home" component={Home}></Route>
-        <Route exact path="/home/home1" component={Home1}></Route>
-        <Route exact path="/home/home2" component={Home2}></Route>
-        <Route exact path="/test" component={Test}></Route>
-      </Suspense>
+      <Route exact path="/" component={App}></Route>
+      <Route exact path="/todo" component={TodoList}></Route>
+      <Route exact path="/home" component={Home}></Route>
+      <Route exact path="/home/home1" component={Home1}></Route>
+      <Route exact path="/home/home2" component={Home2}></Route>
+      <Route exact path="/test" component={Test}></Route>
     </Router>
   </React.StrictMode>,
   document.getElementById('root')

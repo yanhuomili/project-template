@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import store from '../../store'
 import { connect } from 'react-redux'
 
-const StoreTest: any = function(props: any) {
+const StoreTest: any = function (props: any) {
   store.subscribe(() => {
     console.log(99999)
   })

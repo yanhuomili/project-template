@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import { Link } from 'react-router-dom'
 import store from '../../store'
 import {
   addItem,
@@ -25,6 +26,10 @@ class TodoList extends Component {
     /* 订阅，当仓库有变化的时候都会触发该方法，我们可以来处理响应的逻辑 */
     store.subscribe(this.storeChange)
     this.initList()
+    console.log(this.props, 'this.props.history')
+  }
+  componentWillUnmount() {
+    this.setState = () => false
   }
   initList() {
     // let list = [
@@ -70,6 +75,14 @@ class TodoList extends Component {
   render() {
     return (
       <div>
+        <ul>
+          <li>
+            <Link to="/home">跳转home页面</Link>
+          </li>
+          <li>
+            <Link to="/test">跳转test页面</Link>
+          </li>
+        </ul>
         <h1>todo list page</h1>
         <input onChange={this.change} value={this.state.inputValue}></input>
         <div>
